@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOCALSTORAGE PRACTICE</title>
 <style>  
         body{
@@ -10,7 +10,7 @@
     
         }
         .new{
-       font-size: 28px;
+       font-size: 20px;
        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       align-content: center;
         }
@@ -44,8 +44,8 @@
       hideElements();
     }
 
-    const name = localStorage.getItem('name');
-    console.log(name);
+    const userName = localStorage.getItem('name');
+    console.log(userName);
 
     if(userName){
       greetingElement.innerText = `Hello ${userName}`;
@@ -58,8 +58,9 @@
     }
 
     function logout(){
-      localStorage.removeItem('name');
-      console.log(removeItem)
+      localStorage.removeItem('userName');
+      const removedUsername = localStorage.getItem('userName');
+       console.log(removedUsername); 
       window.location.reload();
     }
     localStorage.clear();
